@@ -34,4 +34,6 @@ def completed_tasks_view(request):
 
 
 def all_tasks_view(request):
-    pass
+    return render(
+        request, "all_tasks.html", {"tasks": tasks, "completed_tasks": completed_tasks}
+    )
