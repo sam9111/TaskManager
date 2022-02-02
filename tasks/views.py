@@ -9,9 +9,7 @@ def tasks_view(request):
     return render(request, "tasks.html", {"tasks": tasks})
 
 
-def add_task_view(
-    request,
-):
+def add_task_view(request):
     task_value = request.GET.get("task")
     tasks.append(task_value)
     return HttpResponseRedirect("/tasks/")
